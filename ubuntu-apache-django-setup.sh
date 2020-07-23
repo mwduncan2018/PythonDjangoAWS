@@ -3,7 +3,7 @@
 echo "==================="
 echo "==================="
 echo "==================="
-echo "This script sets up the AWS Ubuntu image with Apache and a Django project"
+echo "This script sets up an AWS Ubuntu image to use Apache with this Django website"
 echo "This script must be executed as root"
 echo "==================="
 echo "==================="
@@ -53,9 +53,6 @@ else
 	pip3 install django==2.1.1
 fi
 
-# create a django project
-# the . puts the manage.py in the current directory
-django-admin  startproject alpha /home/ubuntu/django_project
 # deactivate the virtual env
 deactivate
 
@@ -126,8 +123,6 @@ cd /home/ubuntu
 echo "==================="
 echo "==================="
 echo "==================="
-echo "Go into 'alpha/settings.py' and add this line at the bottom"
-echo "    STATIC_ROOT = os.path.join(BASE_DIR, \"static/\")"
 echo "Add AWS IPv4 Public IP to ALLOWED HOSTS in 'alpha/settings.py'"
 echo "    Example: ALLOWED_HOSTS = ['54.158.154.186',]"
 echo "Execute 'sudo service apache2 restart' when finished and it is good to go!"
