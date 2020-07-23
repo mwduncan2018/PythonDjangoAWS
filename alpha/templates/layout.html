@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animal Chat | {% block title %}Default{% endblock title %}</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Language" value="en-US" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{% static 'global/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+	<link href="{% static 'global/css/site.css' %}" rel="stylesheet" media="screen">
+
+	{% block page_css %}
+	{% endblock page_css %}
+	</head>
+	<body class="customBackground">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			
+			<a id="linkHome" class="navbar-brand"
+				href="{% url 'animalchat:animal_conversation' %}">
+				Post Something
+			</a>
+			<button class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li id="linkAnimalConversation" class="nav-item">
+						<a class="nav-link" href="{% url 'animalchat:animal_conversation' %}">
+							Chat
+						</a>
+					</li>
+					<li id="linkAddPost" class="nav-item">
+						<a class="nav-link" href="{% url 'animalchat:add_post' %}">
+							Add Post
+						</a>
+					</li>
+					<li id="linkViewAnimals" class="nav-item">
+						<a class="nav-link" href="{% url 'animalchat:view_animals' %}">
+							View Animals
+						</a>
+					</li>
+					<li id="linkClearConversation" class="nav-item">
+						<a class="nav-link" href="{% url 'animalchat:clear_conversation' %}">
+							Clear Conversation
+						</a>
+					</li>
+					<li id="linkAbout" class="nav-item">
+						<a class="nav-link" href="{% url 'animalchat:about' %}">
+							About
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container body-content">
+		<br>
+		{% block body_content %}
+			<p style="color:red">If you see this, something is wrong!</p>
+		{% endblock body_content %}
+		
+		<hr />
+		<footer>
+			<p>&copy;&nbsp;2020&nbsp;-&nbsp;Post Something</p>
+		</footer>
+	</div>
+   	<script src="{% static 'global/scripts/jquery.min.js' %}"></script>
+	<script src="{% static 'global/scripts/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'global/scripts/bootstrap.min.js' %}"></script>
+	<script src="{% static 'global/scripts/site.js' %}"></script>
+
+	{% block page_scripts %}
+	{% endblock page_scripts %}
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block page_css %}{% endblock page_css %}
+
+{% block page_scripts %}
+<script src="{% static 'animalchat/scripts/animal-conversation-page.js' %}"></script>
+{% endblock page_scripts %}
+
+{% block body_content %}
+
+<h1>Animal Chat</h1>
+
+<div class="animal-chat">
+
+    {% if message_list %}
+
+        {% for item in message_list %}
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{{ item.picture }}" alt="avatar" class="mr-2 ml-lg-3 ml-0 z-depth-1">
+                </div>
+                <div class="col-md-10">
+                    <div class="header">
+                        <strong class="primary-font">{{ item.mood}}&nbsp;{{ item.submitted_by }}</strong>
+                        &nbsp;
+                        <small class="pull-right text-muted">
+                            <i class="far fa-clock"></i>
+                            {{ item.datetime|date:'M d - f A' }}
+                        </small>
+                    </div>
+                    <div class="talkbubble">
+                        <p>
+                            {{ item.message }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        
+    {% else %}
+    
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h4 style="color:red">Click 'Add Post' in the navigation bar to add a post.</h4>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+    {% endif %}
+</div>
+
+
+{% endblock body_content %}

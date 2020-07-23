@@ -1,0 +1,128 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.customBackground {
+    /* background-color: #e6ffe6; */
+}
+
+.blueForms {
+    background-color: blue;
+    color: red;
+}
+
+
+
+
+
+.talkbubble {
+    margin-top: 10px;
+    position: relative;
+    width: 400px;
+
+    padding: 10px;
+    border-radius: 15px;
+    border: solid #b1dfe7;
+    background: #b1dfe7;
+    
+    box-shadow: 2px 3px;
+}
+
+
+/* For the talk bubble on the conversation page */
+.talkbubble:before {
+    content:"";
+    position: absolute;
+    right: 100%;
+    top: 10px;
+    width: 0;
+    height: 0;
+    
+    border-top: 13px solid transparent;
+    border-right: 26px solid #b1dfe7;
+    border-bottom: 13px solid transparent;
+}
+.talkbubble p {
+    display: inline-block;
+    position: inherit;
+    /* width: inherit; */
+    height: inherit;
+    background: inherit;
+    
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+    resize: none;
+}
+
+
+
+/* For the chat background, borders, and margins on the conversation page */
+.animal-chat {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.animal-chat .row {
+    margin: 40px;
+}
+.animal-chat img {
+    margin-top: 0px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+
+/* For the add post page */
+.animal-post {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius:10px;
+    padding: 60px 80px;
+}
+.radio-custom-duncan {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* For the View Animals page */
+.custom-card-margins {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.custom-light-text {
+    color: gray;
+}
+
+
+* {
+//    outline: 1px solid orange;
+}

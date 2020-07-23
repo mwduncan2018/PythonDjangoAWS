@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Create{% endblock title %}
+{% block page_css %}{% endblock page_css %}
+
+{% block page_scripts %}
+<script src="{% static 'animalchat/scripts/view-animals-page.js' %}"></script>
+{% endblock page_scripts %}
+
+{% block body_content %}
+<h1>Animals</h1>
+<br>
+
+<div class="row">
+    {% for item in card_list %}
+        <div class="col-md-4 custom-card-margins">
+            <div class="card">
+                <h5 class="card-header">{{ item.name }}</h5>
+                <img class="card-img-top" src="{{ item.picture }}" alt="Card image cap">
+                
+                <div class="d-none d-lg-block d-xl-block">
+                    <div class="card-body custom-light-text">
+                    <h6 class="card-title"><strong>{{ item.title }}</strong></h6>
+                    <p class="card-text">{{ item.info }}</p>
+                </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="{{ item.link }}" class="card-link">About</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock body_content %}

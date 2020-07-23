@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Create{% endblock title %}
+{% block page_css %}{% endblock page_css %}
+
+{% block page_scripts %}
+<script src="{% static 'animalchat/scripts/clear-conversation-page.js' %}"></script>
+{% endblock page_scripts %}
+
+{% block body_content %}
+
+
+<h2 class="text-center" style="color:red">Clear the chat?</h2>
+<br>
+<h4 class="text-center" style="color:red">It will take 15 seconds to delete and recreate the table.</h4>
+<br>
+
+<form action="{% url 'animalchat:clear_conversation' %}" method="post">
+    {% csrf_token %}
+    <div class="text-center">
+        <input class="btn btn-outline-warning my-2 my-sm-0"
+            type="submit" value="Yes" />
+    </div>
+</form>
+
+<br>
+<br>
+
+{% endblock body_content %}
