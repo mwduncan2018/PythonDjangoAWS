@@ -122,6 +122,14 @@ textarea {
     color: gray;
 }
 
+/* Custom styling for the Add Post page */
+.control-group {
+    margin-top: 12px;
+    margin-bottom: 42px;
+}
+.help-block strong {
+    color: red;
+}
 
 * {
 //    outline: 1px solid orange;

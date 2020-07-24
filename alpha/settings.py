@@ -37,7 +37,7 @@ SECRET_KEY = 'qu2-sk2n=3uc)u%lv$=@$h4n)7+*&51b_wz$($*mt=+l0%wr=u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['52.72.180.238',]
+ALLOWED_HOSTS = ['23.23.246.112',]
 
 
 # Application definition

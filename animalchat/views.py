@@ -66,6 +66,11 @@ def add_post(request):
                 )
             )
             return HttpResponseRedirect('/animalchat/chat')
+        else:
+            context = {
+                'message_form': form,
+            }
+            return render(request, 'animalchat/add-post.html', context)
     else:
         message_form = MessageForm()
         context = {
