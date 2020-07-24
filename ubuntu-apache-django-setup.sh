@@ -117,7 +117,7 @@ cd /home/ubuntu
 echo "==================="
 echo "==================="
 echo "==================="
-echo "Two manual steps must occur before restarting apache
+echo "Two manual steps must occur before restarting apache"
 echo "    1) Add AWS IPv4 Public IP to ALLOWED HOSTS in 'alpha/settings.py'"
 echo "           Example: ALLOWED_HOSTS = ['54.158.154.186',]"
 echo "    2) Create /home/ubuntu/boto3credentials.ini"
