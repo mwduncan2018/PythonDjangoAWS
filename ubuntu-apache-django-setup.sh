@@ -44,7 +44,7 @@ source /home/ubuntu/django_project/venv/bin/activate
 
 if [ -f /home/ubuntu/django_project/requirements.txt ]; then
 	# install packages --> requirements.txt
-	pip3 install -r requirements.txt
+	pip3 install -r /home/ubuntu/django_project/requirements.txt
 fi
 
 # deactivate the virtual env
